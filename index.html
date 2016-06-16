@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mits's CV Generator v 0.51a</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<div class="row generator-instruction">
+    <div class="col-md-8 col-md-offset-2">
+    <h1>Welcome to Mist's CV generator v 0.51a</h1>
+    <h3>How to use it</h3>
+        <ol>
+            <li>1. Fill all the fields that you want to generate</li>
+            <li>2. Click "Generate" button</li>
+            <li>3. Print & enjoy!</li>
+        </ol>
+    </div>
+</div>
+
+<div class="row generator-form">
+    <div class="col-md-4 col-md-offset-4">
+        <form>
+
+            <h3>Top section</h3>
+            <input type="text" placeholder="Your Name" data-name="main-name" value=""><br>
+            <input type="url" placeholder="Link to your photo (url)" data-name="main-photo"><br>
+
+            <h3>Contact section</h3>
+            <input type="text" placeholder="Address - street & number" data-name="address-1" value=""><br>
+            <input type="text" placeholder="Address - town & ZIP Code" data-name="address-2" value=""><br>
+            <input type="text" placeholder="E-mail" data-name="email" value=""><br>
+            <input type="text" placeholder="Mobile phone" data-name="mobile" value=""><br>
+            <input type="text" placeholder="Birth date" data-name="birth-date" value=""><br>
+
+            <h3>Profile section</h3>
+            <textarea placeholder="Your profile" data-name="profile"></textarea><br>
+
+            <h3>Skills section</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="Skill name" data-name="skill-name-1" value=""><br>
+                    <input type="text" placeholder="Your skill level in %" data-name="skill-bar-1" value="" class="skill-value">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Skill name" data-name="skill-name-2" value=""><br>
+                    <input type="text" placeholder="Your skill level in %" data-name="skill-bar-2" value="" class="skill-value">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Skill name" data-name="skill-name-3" value=""><br>
+                    <input type="text" placeholder="Your skill level in %" data-name="skill-bar-3" value="" class="skill-value">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Skill name" data-name="skill-name-4" value=""><br>
+                    <input type="text" placeholder="Your skill level in %" data-name="skill-bar-4" value="" class="skill-value">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Skill name" data-name="skill-name-5" value=""><br>
+                    <input type="text" placeholder="Your skill level in %" data-name="skill-bar-5" value="" class="skill-value">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Skill name" data-name="skill-name-6" value=""><br>
+                    <input type="text" placeholder="Your skill level in %" data-name="skill-bar-6" value="" class="skill-value">
+                </div>
+            </div>
+
+            <h3>Languages section</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="Language" data-name="language-name-1" value=""><br>
+                    <input type="text" placeholder="Your skill level in %" data-name="language-bar-1" value="" class="skill-value">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Language" data-name="language-name-2" value=""><br>
+                    <input type="text" placeholder="Your skill level in %" data-name="language-bar-2" value="" class="skill-value">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Language" data-name="language-name-3" value=""><br>
+                    <input type="text" placeholder="Your skill level in %" data-name="language-bar-3" value="" class="skill-value">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Language" data-name="language-name-4" value=""><br>
+                    <input type="text" placeholder="Your skill level in %" data-name="language-bar-4" value="" class="skill-value">
+                </div>
+            </div>
+
+            <h3>Interests section</h3>
+            <input type="text" placeholder="Your hobby" data-name="interests-name-1" value=""><br>
+            <input type="text" placeholder="Your hobby" data-name="interests-name-2" value=""><br>
+            <input type="text" placeholder="Your hobby" data-name="interests-name-3" value=""><br>
+            <input type="text" placeholder="Your hobby" data-name="interests-name-4" value=""><br>
+
+            <h3>Experience section</h3>
+            <input type="text" placeholder="Position" data-name="job-title-1" value=""><br>
+            <input type="text" placeholder="Company" data-name="job-company-1" value=""><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="City" data-name="job-place-1" value="">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Time period" data-name="job-date-1" value="">
+                </div>
+            </div>
+            <input type="text" placeholder="Short responsibilities summary" data-name="job-info-1" value=""><br>
+            <h4>Add another experience</h4>
+            <input type="text" placeholder="Position" data-name="job-title-2" value=""><br>
+            <input type="text" placeholder="Company" data-name="job-company-2" value=""><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="City" data-name="job-place-2" value="">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Time period" data-name="job-date-2" value="">
+                </div>
+            </div>
+            <input type="text" placeholder="Short responsibilities summary" data-name="job-info-2" value=""><br>
+            <h4>Add another experience</h4>
+            <input type="text" placeholder="Position" data-name="job-title-3" value=""><br>
+            <input type="text" placeholder="Company" data-name="job-company-3" value=""><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="City" data-name="job-place-3" value="">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Time period" data-name="job-date-3" value="">
+                </div>
+            </div>
+            <input type="text" placeholder="Short responsibilities summary" data-name="job-info-3" value=""><br>
+            <h4>Add another experience</h4>
+            <input type="text" placeholder="Position" data-name="job-title-4" value=""><br>
+            <input type="text" placeholder="Company" data-name="job-company-4" value=""><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="City" data-name="job-place-4" value="">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Time period" data-name="job-date-4" value="">
+                </div>
+            </div>
+            <input type="text" placeholder="Short responsibilities summary" data-name="job-info-4" value=""><br>
+            <h4>Add another experience</h4>
+            <input type="text" placeholder="Position" data-name="job-title-5" value=""><br>
+            <input type="text" placeholder="Company" data-name="job-company-5" value=""><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="City" data-name="job-place-5" value="">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Time period" data-name="job-date-5" value="">
+                </div>
+            </div>
+            <input type="text" placeholder="Short responsibilities summary" data-name="job-info-5" value=""><br>
+            <h3>Education section</h3>
+            <input type="text" placeholder="School name" data-name="school-name-1" value=""><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="City" data-name="school-place-1" value="">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Time period" data-name="school-date-1" value="">
+                </div>
+            </div>
+            <input type="text" placeholder="Major" data-name="school-info-1" value=""><br>
+            <h4>Add another school</h4>
+            <input type="text" placeholder="School name" data-name="school-name-2" value=""><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="City" data-name="school-place-2" value="">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Time period" data-name="school-date-2" value="">
+                </div>
+            </div>
+            <input type="text" placeholder="Major" data-name="school-info-2" value=""><br>
+            <h4>Add another school</h4>
+            <input type="text" placeholder="School name" data-name="school-name-3" value=""><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="City" data-name="school-place-3" value="">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Time period" data-name="school-date-3" value="">
+                </div>
+            </div>
+            <input type="text" placeholder="Major" data-name="school-info-3" value=""><br>
+            <h3>Course section</h3>
+            <input type="text" placeholder="Course name" data-name="course-name-1" value=""><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="City/place" data-name="course-place-1" value="">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Date/Time period" data-name="course-date-1" value="">
+                </div>
+            </div>
+            <h4>Add another course</h4>
+            <input type="text" placeholder="Course name" data-name="course-name-2" value=""><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="City/place" data-name="course-place-2" value="">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Date/Time period" data-name="course-date-2" value="">
+                </div>
+            </div>
+            <h4>Add another course</h4>
+            <input type="text" placeholder="Course name" data-name="course-name-3" value=""><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="City/place" data-name="course-place-3" value="">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Date/Time period" data-name="course-date-3" value="">
+                </div>
+            </div>
+            <h4>Add another course</h4>
+            <input type="text" placeholder="Course name" data-name="course-name-4" value=""><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="City/place" data-name="course-place-4" value="">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Date/Time period" data-name="course-date-4" value="">
+                </div>
+            </div>
+            <h4>Add another course</h4>
+            <input type="text" placeholder="Course name" data-name="course-name-5" value=""><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" placeholder="City/place" data-name="course-place-5" value="">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Date/Time period" data-name="course-date-5" value="">
+                </div>
+            </div>
+            <button class="btn btn-primary">Generate!</button>
+        </form>
+    </div>
+</div>
+
+<div class="cv hidden">
+    <!--<page size="A4">-->
+    <!--Header-->
+    <div class="container">
+        <div class="row header centered">
+            <div class="col-md-3">
+                <div id="photo"><img src="" class="img-responsive" id="main-photo"/></div>
+            </div>
+            <div class="col-md-9 centered">
+                <div class="centered" id="title">
+                    <h1 id="main-name"></h1>
+                    <p>Curiculum vitae</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Body-->
+    <div class="container">
+        <div class="row">
+            <!--Left column-->
+            <div class="col-md-3">
+                <!--Contact-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-header contact-header">
+                            <p>Contact</p>
+                        </div>
+                        <div class="section-content">
+                            <p id="address-1"></p>
+                            <p id="address-2"></p>
+                            <p id="email"></p>
+                            <p id="mobile"></p>
+                            <p id="birth-date"></p>
+                        </div>
+                    </div>
+                </div>
+                <!--Profile-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-header profile-header">
+                            <p>Profile</p>
+                        </div>
+                        <div class="section-content profile-content">
+                            <p id="profile"></p>
+                        </div>
+                    </div>
+                </div>
+                <!--Skills-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-header skills-header">
+                            <p>Skills</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p id="skill-name-1"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="progress">
+                                    <div id="skill-bar-1" class="progress-bar" role="progressbar">
+                                        <span class="sr-only"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p id="skill-name-2"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="progress">
+                                    <div id="skill-bar-2" class="progress-bar" role="progressbar">
+                                        <span class="sr-only"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p id="skill-name-3"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="progress">
+                                    <div id="skill-bar-3" class="progress-bar" role="progressbar">
+                                        <span class="sr-only"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p id="skill-name-4"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="progress">
+                                    <div id="skill-bar-4" class="progress-bar" role="progressbar">
+                                        <span class="sr-only"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p id="skill-name-5"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="progress">
+                                    <div id="skill-bar-5" class="progress-bar" role="progressbar">
+                                        <span class="sr-only"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p id="skill-name-6"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="progress">
+                                    <div id="skill-bar-6" class="progress-bar" role="progressbar">
+                                        <span class="sr-only"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Languages-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-header languages-header">
+                            <p>Languages</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p id="language-name-1"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="progress">
+                                    <div id="language-bar-1" class="progress-bar" role="progressbar">
+                                        <span class="sr-only"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p id="language-name-2"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="progress">
+                                    <div id="language-bar-2" class="progress-bar" role="progressbar">
+                                        <span class="sr-only"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p id="language-name-3"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="progress">
+                                    <div id="language-bar-3" class="progress-bar" role="progressbar">
+                                        <span class="sr-only"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p id="language-name-4"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="progress">
+                                    <div id="language-bar-4" class="progress-bar" role="progressbar">
+                                        <span class="sr-only"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Interests-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-header interests-header">
+                            <p>Interests</p>
+                        </div>
+                        <div class="section-content">
+                            <p id="interests-name-1"></p>
+                            <p id="interests-name-2"></p>
+                            <p id="interests-name-3"></p>
+                            <p id="interests-name-4"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Right column-->
+            <div class="col-md-9">
+                <!--Experience-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-header experience-header">
+                            <p>Experience</p>
+                        </div>
+                        <div class="experience-wrap">
+                            <p id="job-title-1" class="experience-title"></p>
+                            <p id="job-date-1" class="experience-subtitle"></p>
+                            <p id="job-info-1" class="experience-content"></p>
+                        </div>
+                        <div class="experience-wrap">
+                            <p id="job-title-2" class="experience-title"></p>
+                            <p id="job-date-2" class="experience-subtitle"></p>
+                            <p id="job-info-2" class="experience-content"></p>
+                        </div>
+                        <div class="experience-wrap">
+                            <p id="job-title-3" class="experience-title"></p>
+                            <p id="job-date-3" class="experience-subtitle"></p>
+                            <p id="job-info-3" class="experience-content"></p>
+                        </div>
+                        <div class="experience-wrap">
+                            <p id="job-title-4" class="experience-title"></p>
+                            <p id="job-date-4" class="experience-subtitle"></p>
+                            <p id="job-info-4" class="experience-content"></p>
+                        </div>
+                        <div class="experience-wrap">
+                            <p id="job-title-5" class="experience-title"></p>
+                            <p id="job-date-5" class="experience-subtitle"></p>
+                            <p id="job-info-5" class="experience-content"></p>
+                        </div>
+                    </div>
+                </div>
+                <!--Education & courses-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-header">
+                            <p>Education & courses</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 education-header">
+                                <div class="education-wrap">
+                                    <p id="school-name-1" class="experience-title"></p>
+                                    <p id="school-date-1" class="experience-subtitle"></p>
+                                    <p id="school-info-1" class="experience-content"></p>
+                                </div>
+                                <div class="education-wrap">
+                                    <p id="school-name-2" class="experience-title"></p>
+                                    <p id="school-date-2" class="experience-subtitle"></p>
+                                    <p id="school-info-2" class="experience-content"></p>
+                                </div>
+                                <div class="education-wrap">
+                                    <p id="school-name-3" class="experience-title"></p>
+                                    <p id="school-date-3" class="experience-subtitle"></p>
+                                    <p id="school-info-3" class="experience-content"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 courses-header">
+                                <div class="education-wrap">
+                                    <p id="course-name-1" class="experience-title"></p>
+                                    <p id="course-date-1" class="experience-subtitle"></p>
+                                </div>
+                                <div class="education-wrap">
+                                    <p id="course-name-2" class="experience-title"></p>
+                                    <p id="course-date-2" class="experience-subtitle"></p>
+                                </div>
+                                <div class="education-wrap">
+                                    <p id="course-name-3" class="experience-title"></p>
+                                    <p id="course-date-3" class="experience-subtitle"></p>
+                                </div>
+                                <div class="education-wrap">
+                                    <p id="course-name-4" class="experience-title"></p>
+                                    <p id="course-date-4" class="experience-subtitle"></p>
+                                </div>
+                                <div class="education-wrap">
+                                    <p id="course-name-5" class="experience-title"></p>
+                                    <p id="course-date-5" class="experience-subtitle"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--</page>-->
+</div>
+
+<script src="js/jquery-3.0.0.js"></script>
+<script src="js/code.js"></script>
+</body>
+</html>
