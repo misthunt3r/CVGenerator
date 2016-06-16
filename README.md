@@ -2,6 +2,7 @@ CV  Generator
 ==============
 
 **What is it?**
+
 Simple CV Generator. Choose layout. Choose color set. Fill up form. Generate. Print.
 
 At least that's the plan.
